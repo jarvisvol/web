@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Automation Services - Shopify & Instagram Automation | AutomateBiz</title>
+    <title>Business Automation Services - Shopify & Instagram Automation | OneBit Solutions</title>
     <meta name="description" content="Transform your business with Shopify store setup, Instagram automation, and Excel inventory management. No tech team needed. Book free consultation.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/_sdk/element_sdk.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             box-sizing: border-box;
@@ -66,6 +67,15 @@
             animation: fadeInUp 0.8s ease-out;
         }
         
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
         /* Card hover effects */
         .hover-lift {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -96,17 +106,77 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border-radius: 4px;
         }
+        
+        /* WhatsApp floating button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            box-shadow: 3px 3px 10px #999;
+        }
+        
+        .whatsapp-text {
+            position: fixed;
+            bottom: 105px;
+            right: 40px;
+            background-color: #25d366;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            z-index: 99;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        
+        .whatsapp-float:hover + .whatsapp-text {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .text-color-mysettings{
+            color:rgb(49, 35, 35)
+        }
     </style>
     <style>@view-transition { navigation: auto; }</style>
     <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
 </head>
 <body class="h-full smooth-scroll bg-gray-50">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/917678165297" target="_blank" class="whatsapp-float pulse-animation" id="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <div class="whatsapp-text" id="whatsapp-text">
+        Chat with us on WhatsApp!
+    </div>
+    
     <!-- Navigation -->
     <nav class="w-full fixed top-0 z-50 glass-effect shadow-lg" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0">
-                    <h1 class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent" id="nav-company-name">AutomateBiz</h1>
+                    <h1 class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent" id="nav-company-name">OneBit Solutions</h1>
                 </div>
                 <div class="hidden md:flex space-x-8">
                     <a href="#services" class="hover:text-blue-600 transition-colors duration-300 font-medium">Services</a>
@@ -238,7 +308,7 @@
     </section>
 
     <!-- Solution Section -->
-    <section class="w-full py-20 gradient-bg text-white" id="solution">
+    <section class="w-full py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white" id="solution">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Your All-in-One Automation Platform</h2>
@@ -249,22 +319,22 @@
                     <div class="w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center text-4xl bg-white/20" id="solution-icon-1">
                         🏪
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Premium E-commerce Store</h3>
-                    <p class="opacity-90 leading-relaxed">Beautiful, high-converting Shopify store with seamless payment integration</p>
+                    <h3 class="text-xl font-bold mb-4 text-color-mysettings">Premium E-commerce Store</h3>
+                    <p class="opacity-90 leading-relaxed text-color-mysettings">Beautiful, high-converting Shopify store with seamless payment integration</p>
                 </div>
                 <div class="text-center p-8 rounded-2xl bg-white/10 backdrop-blur-sm hover-lift" id="solution-2">
                     <div class="w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center text-4xl bg-white/20" id="solution-icon-2">
                         🤖
                     </div>
-                    <h3 class="text-xl font-bold mb-4">AI Social Automation</h3>
-                    <p class="opacity-90 leading-relaxed">Automated Instagram marketing with smart scheduling and AI captions</p>
+                    <h3 class="text-xl font-bold mb-4 text-color-mysettings">AI Social Automation</h3>
+                    <p class="opacity-90 leading-relaxed text-color-mysettings">Automated Instagram marketing with smart scheduling and AI captions</p>
                 </div>
                 <div class="text-center p-8 rounded-2xl bg-white/10 backdrop-blur-sm hover-lift" id="solution-3">
                     <div class="w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center text-4xl bg-white/20" id="solution-icon-3">
                         📋
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Unified Inventory Control</h3>
-                    <p class="opacity-90 leading-relaxed">One Excel sheet updates inventory across all your sales channels</p>
+                    <h3 class="text-xl font-bold mb-4 text-color-mysettings">Unified Inventory Control</h3>
+                    <p class="opacity-90 leading-relaxed text-color-mysettings">One Excel sheet updates inventory across all your sales channels</p>
                 </div>
             </div>
         </div>
@@ -776,12 +846,17 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="font-bold text-xl mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent" id="footer-company">AutomateBiz</h3>
-                    <p class="text-gray-400">Complete business automation solutions for modern entrepreneurs.</p>
+                    <h3 class="font-bold text-xl mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent" id="footer-company">OneBit Solutions</h3>
+                    <p class="text-gray-800">Complete business automation solutions for modern entrepreneurs.</p>
+                    <div class="mt-4">
+                        <a href="mailto:onebit.contactinfo@gmail.com" class="text-blue-600 hover:text-white transition-colors">
+                            <i class="fas fa-envelope mr-2"></i> onebit.contactinfo@gmail.com
+                        </a>
+                    </div>
                 </div>
                 <div>
                     <h4 class="font-bold mb-4">Services</h4>
-                    <ul class="space-y-2 text-gray-400">
+                    <ul class="space-y-2 text-gray-800">
                         <li><a href="#services" class="hover:text-white transition-colors">Shopify Store Setup</a></li>
                         <li><a href="#services" class="hover:text-white transition-colors">Instagram Automation</a></li>
                         <li><a href="#services" class="hover:text-white transition-colors">Inventory Management</a></li>
@@ -790,7 +865,7 @@
                 </div>
                 <div>
                     <h4 class="font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
+                    <ul class="space-y-2 text-gray-800">
                         <li><a href="#how-it-works" class="hover:text-white transition-colors">How It Works</a></li>
                         <li><a href="#pricing" class="hover:text-white transition-colors">Pricing</a></li>
                         <li><a href="#target-audience" class="hover:text-white transition-colors">For Business Owners</a></li>
@@ -799,15 +874,29 @@
                 </div>
                 <div>
                     <h4 class="font-bold mb-4">Contact</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>📞 +91 9876543210</li>
-                        <li>✉️ hello@automatebiz.com</li>
-                        <li>🕘 Mon-Fri: 9AM-6PM</li>
+                    <ul class="space-y-2 text-gray-800">
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp text-green-400 mr-2"></i>
+                            <a href="https://wa.me/917678165297" target="_blank" class="hover:text-white transition-colors">+91-7678165297</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-blue-400 mr-2"></i>
+                            <a href="mailto:onebit.contactinfo@gmail.com" class="hover:text-white transition-colors">onebit.contactinfo@gmail.com</a>
+                        </li>
+                        <li><i class="far fa-clock text-yellow-400 mr-2"></i> Mon-Fri: 9AM-6PM</li>
                     </ul>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="https://wa.me/917678165297" target="_blank" class="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center hover:bg-green-700 transition-colors">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:onebit.contactinfo@gmail.com" class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center hover:bg-blue-700 transition-colors">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-400">© 2024 AutomateBiz. All rights reserved. | <span id="footer-location">Serving businesses nationwide</span></p>
+                <p class="text-gray-800">© 2024 OneBit Solutions. All rights reserved. | <span id="footer-location">Serving businesses nationwide</span></p>
             </div>
         </div>
     </footer>
@@ -822,9 +911,10 @@
             hero_headline: "Automate Your Business Without the Tech Headache",
             hero_subheadline: "Professional Shopify Store + Instagram Automation + Smart Inventory Management",
             primary_cta: "Start Your Automation Journey",
-            whatsapp_number: "919876543210",
-            company_name: "AutomateBiz",
-            company_location: "your city"
+            whatsapp_number: "917678165297",
+            company_name: "OneBit Solutions",
+            company_location: "your city",
+            email: "onebit.contactinfo@gmail.com"
         };
 
         async function onConfigChange(config) {
@@ -845,6 +935,9 @@
                 }
                 .gradient-bg-light {
                     background: linear-gradient(120deg, ${backgroundColor} 0%, ${surfaceColor} 100%) !important;
+                }
+                #solution {
+                    background: linear-gradient(135deg, ${primaryColor} 0%, ${secondaryColor} 100%) !important;
                 }
             `;
             document.head.appendChild(style);
@@ -912,6 +1005,8 @@
             const heroSubheadline = config.hero_subheadline || defaultConfig.hero_subheadline;
             const primaryCta = config.primary_cta || defaultConfig.primary_cta;
             const companyName = config.company_name || defaultConfig.company_name;
+            const whatsappNumber = config.whatsapp_number || defaultConfig.whatsapp_number;
+            const email = config.email || defaultConfig.email;
 
             const heroHeadlineElement = document.getElementById('hero-headline');
             if (heroHeadlineElement) {
@@ -952,6 +1047,21 @@
             if (footerLocation) {
                 footerLocation.textContent = 'Serving businesses nationwide';
             }
+
+            // Update WhatsApp floating button
+            const whatsappFloat = document.getElementById('whatsapp-float');
+            if (whatsappFloat) {
+                whatsappFloat.href = `https://wa.me/${whatsappNumber}`;
+            }
+
+            // Update email in footer
+            const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+            emailLinks.forEach(link => {
+                link.href = `mailto:${email}`;
+                if (link.textContent.includes('@')) {
+                    link.textContent = email;
+                }
+            });
         }
 
         // Initialize Element SDK
@@ -1027,7 +1137,8 @@
                         ["primary_cta", config.primary_cta || defaultConfig.primary_cta],
                         ["whatsapp_number", config.whatsapp_number || defaultConfig.whatsapp_number],
                         ["company_name", config.company_name || defaultConfig.company_name],
-                        ["company_location", config.company_location || defaultConfig.company_location]
+                        ["company_location", config.company_location || defaultConfig.company_location],
+                        ["email", config.email || defaultConfig.email]
                     ]);
                 }
             });
@@ -1037,9 +1148,9 @@
         onConfigChange(window.elementSdk ? window.elementSdk.config : defaultConfig);
 
         // WhatsApp functionality
-        function openWhatsApp() {
+        function openWhatsApp(phoneNumber = defaultConfig.whatsapp_number) {
             const config = window.elementSdk ? window.elementSdk.config : defaultConfig;
-            const phone = config.whatsapp_number || defaultConfig.whatsapp_number;
+            const phone = phoneNumber || config.whatsapp_number || defaultConfig.whatsapp_number;
             const message = encodeURIComponent("Hi! I'm interested in automating my business. Can we discuss?");
             window.open(`https://wa.me/${phone}?text=${message}`, '_blank', 'noopener,noreferrer');
         }
@@ -1057,13 +1168,19 @@
             whatsappButtons.forEach(id => {
                 const button = document.getElementById(id);
                 if (button) {
-                    button.addEventListener('click', openWhatsApp);
+                    button.addEventListener('click', () => openWhatsApp());
                 }
             });
 
             document.querySelectorAll('.pricing-cta, .pricing-cta-primary').forEach(btn => {
-                btn.addEventListener('click', openWhatsApp);
+                btn.addEventListener('click', () => openWhatsApp());
             });
+
+            // Custom quote button
+            const customQuoteBtn = document.querySelector('#custom-pricing-note button');
+            if (customQuoteBtn) {
+                customQuoteBtn.addEventListener('click', () => openWhatsApp());
+            }
 
             // Smooth scroll for navigation
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1130,6 +1247,22 @@
             document.querySelectorAll('section > div').forEach(section => {
                 observer.observe(section);
             });
+
+            // WhatsApp floating button hover effect
+            const whatsappFloat = document.getElementById('whatsapp-float');
+            const whatsappText = document.getElementById('whatsapp-text');
+            
+            if (whatsappFloat && whatsappText) {
+                whatsappFloat.addEventListener('mouseenter', () => {
+                    whatsappText.style.opacity = '1';
+                    whatsappText.style.transform = 'translateY(0)';
+                });
+                
+                whatsappFloat.addEventListener('mouseleave', () => {
+                    whatsappText.style.opacity = '0';
+                    whatsappText.style.transform = 'translateY(10px)';
+                });
+            }
         });
     </script>
 </body>
